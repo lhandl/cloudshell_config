@@ -1,0 +1,10 @@
+- hosts: localhost
+  gather_facts: false
+  become: true
+  tasks:
+    - name: install packages
+      ansible.builtin.package:
+        name:
+          - telnet
+          - mc
+          - git
